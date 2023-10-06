@@ -24,3 +24,10 @@ unsigned long long Problem_2(const unsigned int number_);
 * @return большой делитель, являющийся простым числом
 */
 unsigned long long Problem_3(const unsigned int number_);
+
+/*
+* @brief Найти самый большой палиндром, полученный умножением двух трёхзначных чисел
+* @param key_ : Запуск программы
+* @return Наибольшой палиндром
+*/
+unsigned long long Problem_4(const unsigned int key_);

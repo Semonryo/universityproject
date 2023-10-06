@@ -24,7 +24,15 @@ int main()
 
 	printf("%llu", Problem_2(number));*/
 
+	/*unsigned int number = 0;
+	printf("number = ");
+	scanf_s("%du", &number);
 
+	printf("%llu", problem_3(number));*/
+
+	unsigned int key = 0;
+
+	printf("%llu", Problem_4(key));
 
 	return 0;
 }
