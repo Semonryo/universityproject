@@ -4,10 +4,15 @@
 #define _FUNCTIONS_H_
 
 /*
-* @brief Возводит число в квадрат
-* @param value_ : Число
-* @return Квадрат числа
+* @brief Г‚Г®Г§ГўГ®Г¤ГЁГІ Г·ГЁГ±Г«Г® Гў ГЄГўГ Г¤Г°Г ГІ
+* @param value_ : Г—ГЁГ±Г«Г®
+* @return ГЉГўГ Г¤Г°Г ГІ Г·ГЁГ±Г«Г 
 */
 unsigned long long Square(const long long value_);
 
 #endif
+
+/*
+* @brief Р¤СѓРЅРєС†РёСЏ РїРѕРёСЃРєР° РїСЂРѕСЃС‚РѕРіРѕ С‡РёСЃР»Р°
+*/
+bool Prime (unsigned long long int x);
