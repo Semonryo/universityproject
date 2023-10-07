@@ -1,4 +1,5 @@
 #include "euler.h"
+#include <stdbool.h>
 
 unsigned long long Problem_1(const unsigned int number_, const unsigned int* multiples_, const unsigned int size_)
 {
@@ -39,25 +40,26 @@ unsigned long long Problem_2(const unsigned int number_)
 	return sum;
 }
 
-unsigned long long Problem_3(const unsigned int number_)
+unsigned long long Problem_3(const unsigned long long number_)
 {
-	unsigned long long divi = 0;
-	for (unsigned int i = 2; i < number_; i++)
-	{
-		if (number_ % i == 0)
-		{
-			for (unsigned int n = 2; n <= i; n++)
-			{
-				if (i % n == 0 && i != n)
-					break;
+	unsigned long long number = number_;
+	unsigned long long del = 2;
 
-				if (i == n && i > divi)
-					divi = n;
-			}
+	while (number % 2 == 0)
+		number /= 2;
+	del++;
+
+	while (del < number)
+	{
+		if (number % del == 0)
+		{
+			while (number % del == 0)
+				number /= del;
 		}
+		del += 2;
 	}
 
-	return divi;
+	return number;
 }
 
 unsigned long long Problem_4(const unsigned int key_)
@@ -69,30 +71,63 @@ unsigned long long Problem_4(const unsigned int key_)
 		for (unsigned int n = 100; n < 1000; n++)
 		{
 			number = n * i;
-			unsigned long long a = number;
+			unsigned long long copy = number;
 			unsigned long long multip = 0;
-			unsigned long long res = 0;
-			unsigned int c = 1;
-			while (a / 10 != 0)
+			unsigned long long revers = 0;
+			unsigned int des = 1;
+
+			while (copy / 10 != 0)
 			{
-				c = c * 10;
-				a = a / 10;
+				des *= 10;
+				copy /= 10;
 			}
-			a = number;
+			copy = number;
 			unsigned long long b = 0;
-			while (c != 0)
+
+			while (des != 0)
 			{
-				b = a % 10;
-				a = a / 10;
-				multip = b * c;
-				res = res + multip;
-				c = c / 10;
+				b = copy % 10;
+				copy /= 10;
+				multip = b * des;
+				revers += multip;
+				des /= 10;
 			}
-			if (res == number && res > palin)
-				palin = res;
+			if (revers == number && revers > palin)
+				palin = revers;
 		}
 	}
 
 	return palin;
+}
+
+unsigned long long Problem_5(const unsigned int mdel_)
+{
+	unsigned long long number = 1;
+	unsigned int del = 0;
+	
+	while (true)
+	{
+		for (unsigned int i = 1; i <= mdel_; i++)
+		{
+			if (number % i == 0)
+				del++;
+			else
+				break;
+		}
+
+		if (mdel_ == del)
+			break;
+
+		number++;
+		del = 0;
+	}
+
+	return number;
+}
+
+unsigned long long Problem_6(const unsigned int quantity_)
+{
+
+	return 0;
 }
 

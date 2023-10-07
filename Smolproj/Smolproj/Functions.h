@@ -1,4 +1,5 @@
 #pragma once
+#include <stdbool.h>
 
 #ifndef _FUNCTIONS_H_
 #define _FUNCTIONS_H_
@@ -15,4 +16,4 @@ unsigned long long Square(const long long value_);
 /*
 * @brief Функция поиска простого числа
 */
-bool Prime (unsigned long long int x);
+bool Prime(unsigned long long x);
