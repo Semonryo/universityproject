@@ -62,13 +62,13 @@ unsigned long long Problem_3(const unsigned long long number_)
 	return number;
 }
 
-unsigned long long Problem_4(const unsigned int key_)
+unsigned long long Problem_4(const unsigned int low_, const unsigned int high_)
 {
 	unsigned long long palin = 0;
 	unsigned long long number = 0;
-	for (unsigned int i = 100; i < 1000; i++)
+	for (unsigned int i = low_; i <= high_; i++)
 	{
-		for (unsigned int n = 100; n < 1000; n++)
+		for (unsigned int n = low_; n <= high_; n++)
 		{
 			number = n * i;
 			unsigned long long copy = number;
@@ -82,13 +82,13 @@ unsigned long long Problem_4(const unsigned int key_)
 				copy /= 10;
 			}
 			copy = number;
-			unsigned long long b = 0;
+			unsigned long long ostcopy = 0;
 
 			while (des != 0)
 			{
-				b = copy % 10;
+				ostcopy = copy % 10;
 				copy /= 10;
-				multip = b * des;
+				multip = ostcopy * des;
 				revers += multip;
 				des /= 10;
 			}
@@ -125,9 +125,4 @@ unsigned long long Problem_5(const unsigned int mdel_)
 	return number;
 }
 
-unsigned long long Problem_6(const unsigned int quantity_)
-{
-
-	return 0;
-}
 

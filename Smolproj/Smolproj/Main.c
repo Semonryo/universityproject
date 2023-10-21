@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include"Functions.h"
 #include"euler.h"
+#include"Task.h"
 
 #define SIZE 2
 
@@ -30,17 +31,27 @@ int main()
 
 	printf("%llu ", problem_3(number));*/
 
-	/*unsigned int key = 0;
+	/*unsigned int low = 0;
+	printf("low = ");
+	scanf_s("%du", &low);
 
-	printf("%llu ", problem_4(key));*/
+	unsigned int high = 0;
+	printf("high = ");
+	scanf_s("%du", &high);
 
-	unsigned int mdel = 0;
-	printf("Max divider = ");
+	printf("%llu ", problem_4(low, high));*/
+
+	/*unsigned int mdel = 0;
+	printf("max divider = ");
 	scanf_s("%du ", &mdel);
 
-	printf("%llu ", Problem_5(mdel));
+	printf("%llu ", problem_5(mdel));*/
 
+	unsigned int snumber = 0;
+	printf("Secret number = ");
+	scanf_s("%du", &snumber);
 
+	printf("%llu", BullsAndCows(snumber));
 
 	return 0;
 }

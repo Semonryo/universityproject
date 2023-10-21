@@ -26,11 +26,12 @@ unsigned long long Problem_2(const unsigned int number_);
 unsigned long long Problem_3(const unsigned long long number_);
 
 /*
-* @brief Найти самый большой палиндром, полученный умножением двух трёхзначных чисел
-* @param key_ : Запуск программы
-* @return Наибольшой палиндром
+* @brief Найти самый большой палиндром, полученный умножением двух чисел
+* @param low_ : Минимальный множитель
+* @param high_ : Максимальный множитель
+* @return Наибольшый палиндром
 */
-unsigned long long Problem_4(const unsigned int key_);
+unsigned long long Problem_4(const unsigned int low_, const unsigned int high_);
 
 /*
 * @brief Найти наименьшее число, которое делится нацело от 1 до mdel_
@@ -38,10 +39,3 @@ unsigned long long Problem_4(const unsigned int key_);
 * @return Самое маленькое число
 */
 unsigned long long Problem_5(const unsigned int mdel_);
-
-/*
-* @brief Найти разность между суммой квадратов и квадратом суммы натуральных чисел
-* @param quantity_ Количество натуральных чисел
-* @return Разность
-*/
-unsigned long long Problem_6(const unsigned int quantity_);
