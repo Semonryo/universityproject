@@ -5,9 +5,9 @@
 unsigned long long BullsAndCows(const unsigned int secret_)
 {
 	unsigned int secret = secret_;
-	unsigned int sec[3];
+	int sec[4];
 	unsigned int guess = 0;
-	unsigned int gue[3];
+	int gue[4];
 	unsigned int bull = 0;
 	unsigned int cow = 0;
 
@@ -51,5 +51,5 @@ unsigned long long BullsAndCows(const unsigned int secret_)
 		cow = 0;
 	}
 
-	return 0;
+	return secret_;
 }
