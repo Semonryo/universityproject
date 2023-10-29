@@ -2,16 +2,16 @@
 #include "Task.h"
 #include "stdbool.h"
 
-unsigned long long BullsAndCows(const unsigned int snumber_)
+unsigned long long BullsAndCows(const unsigned int secret_)
 {
-	unsigned int gnumber = 0;
+	unsigned int guess = 0;
 	unsigned int bull = 0;
 	unsigned int cow = 0;
 
-	unsigned int s1 = snumber_ / 1000;
-	unsigned int s2 = snumber_ / 100 % 10;
-	unsigned int s3 = snumber_ / 10 % 10;
-	unsigned int s4 = snumber_ % 10;
+	unsigned int s1 = secret_ / 1000;
+	unsigned int s2 = secret_ / 100 % 10;
+	unsigned int s3 = secret_ / 10 % 10;
+	unsigned int s4 = secret_ % 10;
 
 	unsigned int g1 = 0;
 	unsigned int g2 = 0;
@@ -21,14 +21,14 @@ unsigned long long BullsAndCows(const unsigned int snumber_)
 	while (true)
 	{
 		printf("Guess the number = ");
-		scanf_s("%du", &gnumber);
+		scanf_s("%du", &guess);
 		
-		g1 = gnumber / 1000;
-		g2 = gnumber / 100 % 10;
-		g3 = gnumber / 10 % 10;
-		g4 = gnumber % 10;
+		g1 = guess / 1000;
+		g2 = guess / 100 % 10;
+		g3 = guess / 10 % 10;
+		g4 = guess % 10;
 
-		if (gnumber == snumber_)
+		if (guess == secret_)
 		{
 			printf("You win! ");
 			break;
@@ -60,5 +60,5 @@ unsigned long long BullsAndCows(const unsigned int snumber_)
 		cow = 0;
 	}
 
-	return gnumber;
+	return guess;
 }
