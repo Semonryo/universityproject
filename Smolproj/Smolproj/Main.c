@@ -47,11 +47,11 @@ int main()
 
 	printf("%llu ", problem_5(mdel));*/
 
-	unsigned int snumber = 0;
+	unsigned int secret = 0;
 	printf("Secret number = ");
-	scanf_s("%du", &snumber);
+	scanf_s("%du", &secret);
 
-	printf("%llu", BullsAndCows(snumber));
+	printf("%llu", BullsAndCows(secret));
 
 	return 0;
 }
